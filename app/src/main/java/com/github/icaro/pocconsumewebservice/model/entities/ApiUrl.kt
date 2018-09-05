@@ -1,4 +1,4 @@
-package com.github.icaro.pocconsumewebservice.model
+package com.github.icaro.pocconsumewebservice.model.entities
 
 import android.arch.persistence.room.*
 

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="editApiUrl" type="id">1532</item>
+    <item name="btnDoRequest" type="id">1533</item>
+    <item name="txtResponseText" type="id">1534</item>
+</resources>

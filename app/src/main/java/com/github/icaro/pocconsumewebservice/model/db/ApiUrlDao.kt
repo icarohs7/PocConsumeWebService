@@ -1,16 +1,15 @@
 package com.github.icaro.pocconsumewebservice.model.db
 
-import android.arch.lifecycle.LiveData
 import android.arch.persistence.room.*
-import com.github.icaro.pocconsumewebservice.model.ApiUrl
+import com.github.icaro.pocconsumewebservice.model.entities.ApiUrl
 
 @Dao
 interface ApiUrlDao {
     
-    @Query("SELECT * FROM apiurl WHERE id = 1")
-    fun queryUrl(): LiveData<ApiUrl>
+    @Query("SELECT * FROM apiurl LIMIT 1")
+    fun queryUrl(): ApiUrl?
     
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insert(apiUrl: ApiUrl)
     
     @Update
